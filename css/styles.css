@@ -1,0 +1,60 @@
+/* ================ VARIABLES ================ */
+:root {
+  --text-color-theme-dark: #ffffff;
+  --text-color-theme-light: #111111;
+  --accent-color: #fd9222;
+}
+/* ================ /VARIABLES ================ */
+
+/* ================ COMMON ================ */
+.list {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.accent-color {
+  color: var(--accent-color);
+}
+/* ================ /COMMON ================ */
+
+/* ================ HEADER ================ */
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: -0.54px;
+  color: var(--text-color-theme-light);
+}
+
+.logo-text-italic {
+  font-style: italic;
+}
+
+.menu-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.28px;
+  color: var(--text-color-theme-light);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--accent-color);
+}
+/* ================ /HEADER ================ */
+
+/* ================ HERO ================ */
+
+/* ================ /HERO ================ */
