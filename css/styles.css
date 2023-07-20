@@ -41,6 +41,7 @@ button {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: #fafafa;
 }
 
 .accent-color {
@@ -54,6 +55,11 @@ body {
   padding-left: 16px;
   padding-right: 16px;
 }
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 /* ================ /COMMON ================ */
 
 /* ================ COMPONENTS ================ */
@@ -64,6 +70,7 @@ body {
   letter-spacing: -0.72px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 50px;
   color: var(--text-color-theme-light);
 }
 /* ================ /COMPONENTS ================ */
@@ -131,19 +138,42 @@ body {
 /* ================ /HEADER ================ */
 
 /* ================ HERO ================ */
+.hero {
+  padding-top: 381px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 30px;
+  background: rgba(17, 17, 17, 0.6);
+}
+
+.hero-bottom-block {
+  display: flex;
+}
+
 .main-title {
+  max-width: 470px;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.21;
   letter-spacing: -0.84px;
   /* color: var(--text-color-theme-dark); */
+  margin-bottom: 32px;
 }
 
 .buy-now-btn {
+  min-width: 144px;
   font-size: 14px;
   font-weight: 600;
   background-color: var(--accent-color);
   color: var(--text-color-theme-dark);
+  border-radius: 100px;
+  border: none;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 14px;
 }
 
 .buy-now-btn:hover,
@@ -153,9 +183,16 @@ body {
 }
 
 .how-made-link {
+  min-width: 183px;
   font-size: 14px;
   font-weight: 600;
   /* color: var(--text-color-theme-dark); */
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 100px;
+  border: 1px solid #111111;
 }
 
 .how-made-link:hover,
@@ -164,10 +201,14 @@ body {
 }
 
 .scroll-down-link {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.29;
   letter-spacing: -0.42px;
+  margin-left: auto;
   /* color: var(--text-color-theme-dark); */
 }
 
@@ -178,10 +219,33 @@ body {
 /* ================ /HERO ================ */
 
 /* ================ BENEFITS ================ */
+.benefits {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #1e1823;
+}
+
+.benefits-container {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.benefits-list {
+  display: flex;
+  column-gap: 88px;
+}
+
+.benefits-list-item {
+  flex-basis: calc((100% - 176px) / 3);
+}
+
 .benefits-list-title {
   font-size: 18px;
   font-weight: 600;
-  /* color: var(--text-color-theme-dark); */
+  margin-bottom: 18px;
+  color: var(--text-color-theme-dark);
 }
 
 .benefits-list-text {
@@ -189,27 +253,85 @@ body {
   font-weight: 400;
   line-height: 1.29;
   letter-spacing: -0.28px;
-  /* color: rgba(255, 255, 255, 0.7); */
+  color: rgba(255, 255, 255, 0.7);
 }
 /* ================ /BENEFITS ================ */
 
 /* ================ INGREDIENTS ================ */
+.ingredients-section-title {
+  max-width: 412px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 32px;
+  row-gap: 24px;
+}
+
+.ingredients-list-item {
+  flex-basis: calc((100% - 96px) / 4);
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 23px;
+  padding-right: 23px;
+  border-radius: 15px;
+  color: var(--text-color-theme-dark);
+}
+
+.ingredients-list-item:nth-child(4n + 1) {
+  background-color: var(--accent-color);
+}
+
+.ingredients-list-item:nth-child(even) {
+  background-color: #ffffff;
+  color: var(--text-color-theme-light);
+  outline: 1px solid var(--accent-color);
+}
+
+.ingredients-list-item:nth-child(4n - 1) {
+  background-color: #1e1823;
+}
+
+.ingredients-list-img {
+  margin-bottom: 32px;
+}
+
 .ingredients-list-title {
   font-size: 14px;
   font-weight: 600;
   line-height: 1.29;
   letter-spacing: -0.28px;
   text-transform: uppercase;
-  /* color: var(--text-color-theme-dark); */
 }
 /* ================ /INGREDIENTS ================ */
 
 /* ================ HOW MADE ================ */
+.how-made-content-wrapper {
+  display: flex;
+  column-gap: 20px;
+}
+
+.how-made-text-wrapper {
+  flex-grow: 1;
+  padding: 32px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
 .how-made-title {
+  max-width: 350px;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.33;
+  margin-bottom: 32px;
   color: var(--text-color-theme-light);
+}
+
+.how-made-list {
+  max-width: 426px;
 }
 
 .how-made-list-item {
@@ -218,6 +340,10 @@ body {
   line-height: 1.29;
   letter-spacing: -0.28px;
   color: var(--text-color-theme-light);
+}
+
+.how-made-list-item:not(:last-child) {
+  margin-bottom: 24px;
 }
 /* ================ /HOW MADE ================ */
 
