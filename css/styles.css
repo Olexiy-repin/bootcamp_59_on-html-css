@@ -39,6 +39,10 @@ button {
   cursor: pointer;
 }
 
+figure {
+  margin: 0;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #fafafa;
@@ -149,6 +153,7 @@ body {
 
 .hero-bottom-block {
   display: flex;
+  align-items: center;
 }
 
 .main-title {
@@ -157,8 +162,8 @@ body {
   font-weight: 500;
   line-height: 1.21;
   letter-spacing: -0.84px;
-  /* color: var(--text-color-theme-dark); */
   margin-bottom: 32px;
+  color: var(--text-color-theme-dark);
 }
 
 .buy-now-btn {
@@ -186,18 +191,19 @@ body {
   min-width: 183px;
   font-size: 14px;
   font-weight: 600;
-  /* color: var(--text-color-theme-dark); */
+  color: var(--text-color-theme-dark);
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 40px;
   padding-right: 40px;
   border-radius: 100px;
-  border: 1px solid #111111;
+  border: 1px solid #ffffff;
 }
 
 .how-made-link:hover,
 .how-made-link:focus {
   color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .scroll-down-link {
@@ -209,7 +215,7 @@ body {
   line-height: 1.29;
   letter-spacing: -0.42px;
   margin-left: auto;
-  /* color: var(--text-color-theme-dark); */
+  color: var(--text-color-theme-dark);
 }
 
 .scroll-down-link:hover,
@@ -348,12 +354,33 @@ body {
 /* ================ /HOW MADE ================ */
 
 /* ================ PRODUCTS ================ */
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 18px;
+  row-gap: 24px;
+}
+
+.products-list-item {
+  width: calc((100% - 54px) / 4);
+  text-align: center;
+  padding: 32px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background-color: #ffffff;
+}
+
+.products-list-img {
+  margin-bottom: 8px;
+}
+
 .products-list-name {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.33;
   letter-spacing: -0.36px;
   text-transform: uppercase;
+  margin-bottom: 2px;
   color: var(--text-color-theme-light);
 }
 
@@ -362,33 +389,76 @@ body {
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: -0.24px;
+  margin-bottom: 18px;
   color: rgba(17, 17, 17, 0.7);
 }
 
 .products-list-price {
+  display: inline-block;
+  min-width: 94px;
+  padding: 8px 16px;
   font-size: 14px;
   font-weight: 600;
+  border-radius: 100px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background-color: #fafafa;
   color: var(--text-color-theme-light);
 }
 /* ================ /PRODUCTS ================ */
 
 /* ================ BESTSELLERS ================ */
+.bestsellers-list {
+  display: flex;
+  column-gap: 16px;
+}
+
+.bestsellers-list-item {
+  width: calc((100% - 32px) / 3);
+}
+
 .bestsellers-list-caption {
+  padding-top: 28px;
+  padding-bottom: 28px;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.33;
   letter-spacing: -0.36px;
   text-transform: uppercase;
+  text-align: center;
+  border-radius: 0px 0px 15px 15px;
+  border-right: 1px solid rgba(17, 17, 17, 0.1);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+  border-left: 1px solid rgba(17, 17, 17, 0.1);
+  background-color: #ffffff;
   color: var(--text-color-theme-light);
 }
 /* ================ /BESTSELLERS ================ */
 
 /* ================ REVIEWS ================ */
+.reviews-list {
+  display: flex;
+  column-gap: 28px;
+  margin-bottom: 50px;
+}
+
+.reviews-list-item {
+  width: calc((100% - 56px) / 3);
+  padding-top: 56px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0px 9.05px 100px 0px rgba(17, 17, 17, 0.03);
+}
+
 .reviews-list-fullname {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.33;
   text-align: center;
+  margin-bottom: 24px;
   color: var(--text-color-theme-light);
 }
 
@@ -402,9 +472,18 @@ body {
 }
 
 .leave-review-btn {
+  display: block;
+  width: 222px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 18px;
   font-weight: 600;
+  border-radius: 100px;
+  border: 1px solid var(--accent-color);
   color: var(--text-color-theme-light);
+  background-color: #ffffff;
 }
 
 .leave-review-btn:hover,
@@ -412,4 +491,5 @@ body {
   color: var(--text-color-theme-dark);
   background-color: var(--accent-color);
 }
+
 /* ================ /REVIEWS ================ */
