@@ -384,37 +384,58 @@
           <ul class="bestsellers-list list">
             <li class="bestsellers-list-item">
               <figure class="bestsellers-list-img-wrapper">
-                <img
-                  class="bestsellers-list-img"
-                  src="./images/bestsellers/img-1.jpg"
-                  alt="chocolate with nuts"
-                  width="368"
-                  height="464t"
-                />
+                <div class="bestsellers-list-overlay-wrapper">
+                  <img
+                    class="bestsellers-list-img"
+                    src="./images/bestsellers/img-1.jpg"
+                    alt="chocolate with nuts"
+                    width="368"
+                    height="464t"
+                  />
+                  <p class="overlay">
+                    Chocolate with fruit is an unbeatable combination of two of the tastiest things
+                    in the world. This dessert combines delicate and aromatic chocolate with fresh
+                    and juicy fruits, creating a true poetry of taste.
+                  </p>
+                </div>
                 <figcaption class="bestsellers-list-caption">CHOCOLATE WITH NUTS</figcaption>
               </figure>
             </li>
             <li class="bestsellers-list-item">
               <figure class="bestsellers-list-img-wrapper">
-                <img
-                  class="bestsellers-list-img"
-                  src="./images/bestsellers/img-2.jpg"
-                  alt="chocolate with fruits"
-                  width="368"
-                  height="464t"
-                />
+                <div class="bestsellers-list-overlay-wrapper">
+                  <img
+                    class="bestsellers-list-img"
+                    src="./images/bestsellers/img-2.jpg"
+                    alt="chocolate with fruits"
+                    width="368"
+                    height="464t"
+                  />
+                  <p class="overlay">
+                    Chocolate with fruit is an unbeatable combination of two of the tastiest things
+                    in the world. This dessert combines delicate and aromatic chocolate with fresh
+                    and juicy fruits, creating a true poetry of taste.
+                  </p>
+                </div>
                 <figcaption class="bestsellers-list-caption">CHOCOLATE WITH FRUITS</figcaption>
               </figure>
             </li>
             <li class="bestsellers-list-item">
               <figure class="bestsellers-list-img-wrapper">
-                <img
-                  class="bestsellers-list-img"
-                  src="./images/bestsellers/img-3.jpg"
-                  alt="dark chocolate"
-                  width="368"
-                  height="464t"
-                />
+                <div class="bestsellers-list-overlay-wrapper">
+                  <img
+                    class="bestsellers-list-img"
+                    src="./images/bestsellers/img-3.jpg"
+                    alt="dark chocolate"
+                    width="368"
+                    height="464t"
+                  />
+                  <p class="overlay">
+                    Chocolate with fruit is an unbeatable combination of two of the tastiest things
+                    in the world. This dessert combines delicate and aromatic chocolate with fresh
+                    and juicy fruits, creating a true poetry of taste.
+                  </p>
+                </div>
                 <figcaption class="bestsellers-list-caption">DARK CHOCOLATE</figcaption>
               </figure>
             </li>
@@ -469,7 +490,7 @@
               </p>
             </li>
           </ul>
-          <button class="leave-review-btn" type="button">Leave a review</button>
+          <button class="leave-review-btn" type="button" data-modal-open>Leave a review</button>
         </div>
       </section>
     </main>
@@ -480,18 +501,25 @@
         <h3 class="">Social networks</h3>
         <ul>
           <li>
-            <img
-              src="./images/icons/instagram-network.svg"
-              alt="instagram"
-              width="24"
-              height="24"
-            />
+            <a href="">
+              <svg width="24" height="24" aria-label="instagram icon">
+                <use href="./images/icons/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
           </li>
           <li>
-            <img src="./images/icons/facebook-network.svg" alt="instagram" width="24" height="24" />
+            <a href="">
+              <svg width="24" height="24" aria-label="facebook icon">
+                <use href="./images/icons/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
           </li>
           <li>
-            <img src="./images/icons/twitter-network.svg" alt="instagram" width="24" height="24" />
+            <a href="">
+              <svg width="24" height="24" aria-label="twitter icon">
+                <use href="./images/icons/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
@@ -524,5 +552,13 @@
         </nav>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        <button type="button" class="modal-window-close-btn" data-modal-close>X</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

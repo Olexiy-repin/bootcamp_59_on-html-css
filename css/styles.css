@@ -3,6 +3,7 @@
   --text-color-theme-dark: #ffffff;
   --text-color-theme-light: #111111;
   --accent-color: #fd9222;
+  --transition-dur-and-func: 250ms linear;
 }
 /* ================ /VARIABLES ================ */
 
@@ -128,6 +129,7 @@ body {
   line-height: 1.14;
   letter-spacing: -0.28px;
   color: var(--text-color-theme-light);
+  transition: color var(--transition-dur-and-func);
 }
 
 .menu-link:hover,
@@ -148,6 +150,7 @@ body {
   height: 40px;
   border-radius: 10px;
   border: 1px solid rgba(17, 17, 17, 0.1);
+  transition: border-color var(--transition-dur-and-func);
 }
 
 .social-list-link:focus {
@@ -157,6 +160,10 @@ body {
 .social-list-link:hover,
 .social-list-link:focus {
   border-color: rgba(253, 146, 34, 0.1);
+}
+
+.social-list-icon {
+  transition: fill var(--transition-dur-and-func);
 }
 
 .social-list-link:hover .social-list-icon,
@@ -175,6 +182,7 @@ body {
   background-color: rgba(17, 17, 17, 0.6);
   background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
     url('../images/hero/bg.jpg');
+  background-size: cover;
 }
 
 .hero-bottom-block {
@@ -478,6 +486,37 @@ body {
   width: calc((100% - 32px) / 3);
 }
 
+.bestsellers-list-overlay-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.28px;
+  padding: 40px;
+  border-radius: 15px 15px 0px 0px;
+  color: #fafafa;
+  background-color: linear-gradient(161deg, rgba(253, 253, 255, 0.1) 0%, rgba(8, 2, 21, 0) 100%);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+  transform: translateY(100%);
+  transition: transform var(--transition-dur-and-func);
+}
+
+.bestsellers-list-item:hover .overlay {
+  transform: translateY(0%);
+}
+
 .bestsellers-list-caption {
   padding-top: 28px;
   padding-bottom: 28px;
@@ -555,3 +594,36 @@ body {
 }
 
 /* ================ /REVIEWS ================ */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms linear, visibility 500ms linear;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-window {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 518px;
+  height: 794px;
+  border-radius: 15px;
+  background-color: #fafafa;
+}
+
+.modal-window-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
