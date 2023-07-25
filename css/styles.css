@@ -626,6 +626,7 @@ body {
 
 /* ================ /REVIEWS ================ */
 
+/* ================ BACKDROP ================ */
 .backdrop {
   position: fixed;
   top: 0;
@@ -641,8 +642,10 @@ body {
   visibility: hidden;
   pointer-events: none;
 }
+/* ================ /BACKDROP ================ */
 
-.modal-window {
+/* ================ MODAL WINDOW ================ */
+.modal {
   position: absolute;
   top: 80px;
   left: 50%;
@@ -650,11 +653,167 @@ body {
   width: 518px;
   height: 794px;
   border-radius: 15px;
+  padding: 40px;
   background-color: #fafafa;
 }
 
-.modal-window-close-btn {
+.modal-close-btn {
   position: absolute;
   top: 24px;
   right: 24px;
+  padding: 0;
+  line-height: 0;
+  border: none;
+  background-color: transparent;
 }
+
+.modal-close-btn-icon {
+  stroke: #111111;
+}
+
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+  stroke: var(--accent-color);
+}
+/* ================ /MODAL WINDOW ================ */
+
+/* ================ MODAL FORM ================ */
+.review-form-description {
+  max-width: 298px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.17;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+  color: var(--text-color-theme-light);
+  margin-bottom: 40px;
+}
+
+.review-form-field {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.review-form-field-description {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.28px;
+  color: rgba(64, 64, 64, 0.3);
+  margin-bottom: 8px;
+}
+
+.review-form-input-wrapper {
+  position: relative;
+  display: block;
+}
+
+.review-form-input {
+  width: 100%;
+  height: 68px;
+  font-size: 24px;
+  padding-left: 62px;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  color: var(--text-color-theme-light);
+  background-color: transparent;
+  transition: border-color var(--transition-dur-and-func);
+}
+
+.review-form-input:focus {
+  outline-color: transparent;
+  outline-offset: 2px;
+  border-color: var(--accent-color);
+}
+
+.review-form-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  stroke: #404040;
+  transition: stroke var(--transition-dur-and-func);
+}
+
+.review-form-input:focus + .review-form-field-icon {
+  stroke: var(--accent-color);
+}
+
+.review-form-message {
+  width: 100%;
+  height: 137px;
+  resize: none;
+  font-size: 24px;
+  padding: 22px 24px;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  background-color: transparent;
+  transition: border-color var(--transition-dur-and-func);
+}
+
+.review-form-message::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  color: rgba(64, 64, 64, 0.3);
+}
+
+.review-form-message:focus {
+  outline-color: transparent;
+  outline-offset: 2px;
+  border-color: var(--accent-color);
+}
+
+.review-form-checkbox-policy {
+  position: absolute;
+  appearance: none;
+}
+
+.review-form-checkbox-policy:checked + .review-form-own-checkbox {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.review-form-own-checkbox {
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.review-form-own-checkbox-icon {
+  display: none;
+}
+
+.review-form-checkbox-policy:checked + .review-form-own-checkbox use {
+  display: block;
+}
+
+.reviev-form-field-policy {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.28px;
+  color: rgba(64, 64, 64, 0.6);
+}
+
+.review-form-submit-btn {
+  min-width: 118px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  color: var(--text-color-theme-dark);
+  background-color: var(--accent-color);
+  transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
+}
+
+.review-form-submit-btn:hover,
+.review-form-submit-btn:focus {
+  background-color: #fcf1e0;
+  color: var(--accent-color);
+}
+
+/* ================ /MODAL FORM ================ */
