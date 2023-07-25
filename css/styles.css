@@ -18,8 +18,20 @@ ol {
   width: 500px;
   min-height: 200px;
   padding: 40px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: 0 10px 10px 0 #cccccc;
+}
+
+.contact-form-input-desc {
+  display: block;
+  font-size: 12px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.required-color {
+  color: tomato;
 }
 
 .contact-form-input {
