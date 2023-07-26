@@ -1,0 +1,6 @@
+:root {
+  --text-color-theme-dark: #ffffff;
+  --text-color-theme-light: #111111;
+  --accent-color: #fd9222;
+  --transition-dur-and-func: 250ms linear;
+}

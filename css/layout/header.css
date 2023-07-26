@@ -1,0 +1,141 @@
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+
+  .social-list {
+    display: none;
+  }
+
+  .burger-btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    line-height: 0;
+  }
+
+  .burger-btn-icon {
+    stroke: #111111;
+  }
+}
+
+.page-header {
+  padding-top: 20px;
+  padding-bottom: 14px;
+}
+
+.page-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.29;
+  letter-spacing: -0.42px;
+  color: var(--text-color-theme-light);
+}
+
+.logo-text-italic {
+  font-style: italic;
+}
+
+.logo-icon {
+  margin-left: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .page-header {
+    justify-content: flex-start;
+  }
+
+  .page-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 524px;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  .menu-link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: -0.28px;
+    color: var(--text-color-theme-light);
+    transition: color var(--transition-dur-and-func);
+  }
+
+  .menu-link:hover,
+  .menu-link:focus {
+    color: var(--accent-color);
+  }
+
+  .social-list {
+    display: flex;
+    column-gap: 14px;
+  }
+
+  .social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    transition: border-color var(--transition-dur-and-func);
+  }
+
+  .social-list-link:focus {
+    outline-color: transparent;
+    outline-offset: 2px;
+  }
+
+  .social-list-link:hover,
+  .social-list-link:focus {
+    border-color: rgba(253, 146, 34, 0.1);
+  }
+
+  .social-list-icon {
+    transition: fill var(--transition-dur-and-func);
+  }
+
+  .social-list-link:hover .social-list-icon,
+  .social-list-link:focus .social-list-icon {
+    fill: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-navigation {
+    max-width: 896px;
+  }
+
+  .logo {
+    line-height: 1.11;
+    letter-spacing: -0.54px;
+  }
+
+  .menu {
+    column-gap: 24px;
+  }
+}
