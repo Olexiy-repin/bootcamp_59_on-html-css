@@ -8,3 +8,5 @@
 
 /* LAYOUT STYLES */
 @import './layout/header.css';
+@import './layout/hero.css';
+@import './layout/mobile-menu.css';
